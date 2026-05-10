@@ -10,38 +10,32 @@
         .container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
         .analysis-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        .status { display: inline-block; background: #ffebee; color: #c62828; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
+        .status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        th, td { padding: 12px; border: 1px solid #eee; text-align: left; }
+        th { background: #f8f9fa; }
+        .contact-btn { display: inline-block; background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin-top: 15px; }
     </style>
 </head>
 <body>
-    <nav>ESPACE MEMBRE PRIVÉ - COACHING CAC40</nav>
+    <nav>ESPACE MEMBRE PRIVÉ - ANALYSES CAC40</nav>
     
     <div class="container">
         <div class="analysis-card">
-            <div class="status">🔴 Marché Ouvert</div>
+            <div class="status">● Marché Ouvert</div>
             <h2>Tableau de Bord Stratégique</h2>
             
-            <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; text-align: left;">
-                <tr style="background: #f8f9fa;">
-                    <th style="padding: 10px; border: 1px solid #ddd;">Indicateur</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Signal</th>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Tendance Fond</td>
-                    <td style="padding: 10px; border: 1px solid #ddd; color: #2e7d32; font-weight: bold;">HAUSSIER</td>
-                </tr>
-                <tr>
-                    <td style="padding: 10px; border: 1px solid #ddd;">Volume</td>
-                    <td style="padding: 10px; border: 1px solid #ddd; color: #ef6c00; font-weight: bold;">MODÉRÉ</td>
-                </tr>
+            <table>
+                <tr><th>Indicateur</th><th>Signal</th></tr>
+                <tr><td>Tendance Fond</td><td style="color: green; font-weight: bold;">HAUSSIER</td></tr>
+                <tr><td>Volume</td><td style="color: orange; font-weight: bold;">MODÉRÉ</td></tr>
             </table>
 
-            <div style="height:450px; margin-top: 20px;">
-                <div class="tradingview-widget-container" style="height:100%;width:100%">
-                  <div id="tradingview_pro" style="height:100%;width:100%"></div>
-                  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                  <script type="text/javascript">
-                  new TradingView.widget({
+            <div style="height:450px; margin: 20px 0;">
+                <div id="tradingview_chart" style="height:100%; width:100%;"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                <script type="text/javascript">
+                new TradingView.widget({
                     "autosize": true,
                     "symbol": "TVC:PX1",
                     "interval": "D",
@@ -49,17 +43,18 @@
                     "theme": "light",
                     "style": "1",
                     "locale": "fr",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": false,
-                    "allow_symbol_change": true,
-                    "container_id": "tradingview_pro"
-                  });
-                  </script>
-                </div>
+                    "container_id": "tradingview_chart"
+                });
+                </script>
             </div>
 
-            <div style="margin-top:20px; padding: 15px; background: #fffde7; border-left: 5px solid #fbc02d; font-size: 0.95rem;">
-                <strong>Conseil du jour :</strong> Le CAC 40 reste solide au-dessus des 8000 points. Attention à la volatilité lors de l'ouverture américaine.
+            <div style="background: #fffde7; padding: 15px; border-left: 5px solid #fbc02d;">
+                <strong>Conseil du jour :</strong> Le CAC 40 reste solide. Observez bien la zone des 8000 points.
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p>Une question ? Je vous aide avec plaisir.</p>
+                <a href="mailto:amoubarik52@gmail.com" class="contact-btn">Envoyer un message à Abdellatif</a>
             </div>
         </div>
     </div>
