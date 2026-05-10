@@ -1,0 +1,16 @@
+name: Analyse CAC40
+on: [workflow_dispatch] # Permet de lancer l'analyse à la main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Installer Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Installer les outils
+        run: pip install yfinance pandas
+      - name: Lancer l'analyse
+        run: python analyse.py
