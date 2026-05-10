@@ -9,12 +9,13 @@
         nav { background: #000; color: #fff; padding: 1rem; text-align: center; font-weight: bold; }
         .container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
         .analysis-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; }
         .status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
         table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
         th, td { padding: 12px; border: 1px solid #eee; text-align: left; }
         th { background: #f8f9fa; }
-        .contact-btn { display: inline-block; background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin-top: 15px; }
+        .contact-btn { display: inline-block; background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin-top: 15px; font-weight: bold; }
+        .footer-note { text-align: center; margin-top: 30px; font-size: 0.9rem; color: #666; }
     </style>
 </head>
 <body>
@@ -26,36 +27,52 @@
             <h2>Tableau de Bord Stratégique</h2>
             
             <table>
-                <tr><th>Indicateur</th><th>Signal</th></tr>
-                <tr><td>Tendance Fond</td><td style="color: green; font-weight: bold;">HAUSSIER</td></tr>
-                <tr><td>Volume</td><td style="color: orange; font-weight: bold;">MODÉRÉ</td></tr>
+                <tr>
+                    <th>Indicateur</th>
+                    <th>Signal</th>
+                </tr>
+                <tr>
+                    <td>Tendance Fond</td>
+                    <td style="color: #2e7d32; font-weight: bold;">HAUSSIER</td>
+                </tr>
+                <tr>
+                    <td>Volume</td>
+                    <td style="color: #ef6c00; font-weight: bold;">MODÉRÉ</td>
+                </tr>
             </table>
 
-            <div style="height:450px; margin: 20px 0;">
-                <div id="tradingview_chart" style="height:100%; width:100%;"></div>
+            <div style="height:450px; margin: 20px 0; border: 1px solid #eee;">
+                <div id="tradingview_cac" style="height:100%; width:100%;"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                 <script type="text/javascript">
                 new TradingView.widget({
                     "autosize": true,
-                    "symbol": "TVC:PX1",
+                    "symbol": "INDEX:PX1",
                     "interval": "D",
                     "timezone": "Europe/Paris",
                     "theme": "light",
                     "style": "1",
                     "locale": "fr",
-                    "container_id": "tradingview_chart"
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_cac"
                 });
                 </script>
             </div>
 
-            <div style="background: #fffde7; padding: 15px; border-left: 5px solid #fbc02d;">
-                <strong>Conseil du jour :</strong> Le CAC 40 reste solide. Observez bien la zone des 8000 points.
+            <div style="background: #fffde7; padding: 15px; border-left: 5px solid #fbc02d; border-radius: 4px;">
+                <strong>Conseil du jour :</strong> Le CAC 40 reste solide. Observez bien la zone des 8000 points. Surveillez l'ouverture de Wall Street à 15h30.
             </div>
 
-            <div style="text-align: center; margin-top: 30px;">
-                <p>Une question ? Je vous aide avec plaisir.</p>
+            <div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px solid #eee;">
+                <p>Besoin d'un éclairage sur une position ?</p>
                 <a href="mailto:amoubarik52@gmail.com" class="contact-btn">Envoyer un message à Abdellatif</a>
             </div>
+        </div>
+        
+        <div class="footer-note">
+            © 2026 Coaching CAC40 Pro - Analyses à but pédagogique uniquement.
         </div>
     </div>
 </body>
