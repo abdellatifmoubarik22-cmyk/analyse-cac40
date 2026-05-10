@@ -1,46 +1,67 @@
-<div class="analysis-card">
-    <div class="status">🔴 Marché Ouvert</div>
-    <h2>Tableau de Bord Stratégique</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Membre - Coaching CAC40</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; }
+        nav { background: #000; color: #fff; padding: 1rem; text-align: center; font-weight: bold; }
+        .container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
+        .analysis-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+        .status { display: inline-block; background: #ffebee; color: #c62828; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
+    </style>
+</head>
+<body>
+    <nav>ESPACE MEMBRE PRIVÉ - COACHING CAC40</nav>
     
-    <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
-        <tr style="background: #eee;">
-            <th style="padding: 10px; border: 1px solid #ddd;">Indicateur</th>
-            <th style="padding: 10px; border: 1px solid #ddd;">Signal</th>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">Tendance Fond</td>
-            <td style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">HAUSSIER</td>
-        </tr>
-        <tr>
-            <td style="padding: 10px; border: 1px solid #ddd;">Volume</td>
-            <td style="padding: 10px; border: 1px solid #ddd; color: orange; font-weight: bold;">MODÉRÉ</td>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="analysis-card">
+            <div class="status">🔴 Marché Ouvert</div>
+            <h2>Tableau de Bord Stratégique</h2>
+            
+            <table style="width:100%; border-collapse: collapse; margin-bottom: 20px; text-align: left;">
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">Indicateur</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Signal</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Tendance Fond</td>
+                    <td style="padding: 10px; border: 1px solid #ddd; color: #2e7d32; font-weight: bold;">HAUSSIER</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #ddd;">Volume</td>
+                    <td style="padding: 10px; border: 1px solid #ddd; color: #ef6c00; font-weight: bold;">MODÉRÉ</td>
+                </tr>
+            </table>
 
-    <div style="height:400px;">
-        <div class="tradingview-widget-container" style="height:100%;width:100%">
-          <div id="tradingview_cac40" style="height:calc(100% - 32px);width:100%"></div>
-          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-          <script type="text/javascript">
-          new TradingView.widget({
-            "autosize": true,
-            "symbol": "EURONEXT:PX1",
-            "interval": "D",
-            "timezone": "Etc/UTC",
-            "theme": "light",
-            "style": "1",
-            "locale": "fr",
-            "toolbar_bg": "#f1f3f6",
-            "enable_publishing": false,
-            "hide_top_toolbar": true,
-            "save_image": false,
-            "container_id": "tradingview_cac40"
-          });
-          </script>
+            <div style="height:450px; margin-top: 20px;">
+                <div class="tradingview-widget-container" style="height:100%;width:100%">
+                  <div id="tradingview_pro" style="height:100%;width:100%"></div>
+                  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                  <script type="text/javascript">
+                  new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "INDEX:CAC40",
+                    "interval": "D",
+                    "timezone": "Europe/Paris",
+                    "theme": "light",
+                    "style": "1",
+                    "locale": "fr",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview_pro"
+                  });
+                  </script>
+                </div>
+            </div>
+
+            <div style="margin-top:20px; padding: 15px; background: #fffde7; border-left: 5px solid #fbc02d; font-size: 0.95rem;">
+                <strong>Conseil du jour :</strong> Le CAC 40 reste solide au-dessus des 8000 points. Attention à la volatilité lors de l'ouverture américaine.
+            </div>
         </div>
     </div>
-
-    <div style="margin-top:20px; padding: 15px; background: #fffde7; border-left: 5px solid #fbc02d;">
-        <strong>Conseil du jour :</strong> Ne pas prendre de position avant l'ouverture de Wall Street à 15h30.
-    </div>
-</div>
+</body>
+</html>
