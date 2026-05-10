@@ -1,44 +1,46 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Membre - Coaching CAC40</title>
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; }
-        nav { background: #000; color: #fff; padding: 1rem; text-align: center; font-weight: bold; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-        .welcome-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 2rem; border-left: 5px solid #28a745; }
-        .analysis-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h1 { color: #000; margin-top: 0; }
-        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
-        .status { display: inline-block; background: #e1f5fe; color: #01579b; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
-        .footer-action { text-align: center; margin-top: 2rem; }
-        .contact-btn { background: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-    </style>
-</head>
-<body>
-    <nav>ESPACE MEMBRE PRIVÉ - COACHING CAC40</nav>
+<div class="analysis-card">
+    <div class="status">🔴 Marché Ouvert</div>
+    <h2>Tableau de Bord Stratégique</h2>
     
-    <div class="container">
-        <div class="welcome-card">
-            <h1>Bienvenue, Membre Pro !</h1>
-            <p>Merci pour votre confiance. Vous avez désormais accès à mes analyses exclusives quotidiennes.</p>
-        </div>
+    <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+        <tr style="background: #eee;">
+            <th style="padding: 10px; border: 1px solid #ddd;">Indicateur</th>
+            <th style="padding: 10px; border: 1px solid #ddd;">Signal</th>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Tendance Fond</td>
+            <td style="padding: 10px; border: 1px solid #ddd; color: green; font-weight: bold;">HAUSSIER</td>
+        </tr>
+        <tr>
+            <td style="padding: 10px; border: 1px solid #ddd;">Volume</td>
+            <td style="padding: 10px; border: 1px solid #ddd; color: orange; font-weight: bold;">MODÉRÉ</td>
+        </tr>
+    </table>
 
-        <div class="analysis-card">
-            <div class="status">Dernière mise à jour : Aujourd'hui</div>
-            <h2>Analyse du jour - CAC 40</h2>
-            <p><strong>Tendance actuelle :</strong> En attente des chiffres de l'inflation.</p>
-            <p><strong>Niveaux clés :</strong> Support à 7 950 pts / Résistance à 8 120 pts.</p>
-            <hr>
-            <p><em>Note : Les analyses sont publiées chaque matin avant l'ouverture de la bourse.</em></p>
-        </div>
-
-        <div class="footer-action">
-            <p>Besoin d'un conseil personnalisé ?</p>
-            <a href="mailto:ton-email@exemple.com" class="contact-btn">M'envoyer un message</a>
+    <div style="height:400px;">
+        <div class="tradingview-widget-container" style="height:100%;width:100%">
+          <div id="tradingview_cac40" style="height:calc(100% - 32px);width:100%"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+          new TradingView.widget({
+            "autosize": true,
+            "symbol": "INDEX:PX1",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "fr",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "hide_top_toolbar": true,
+            "save_image": false,
+            "container_id": "tradingview_cac40"
+          });
+          </script>
         </div>
     </div>
-</body>
-</html>
+
+    <div style="margin-top:20px; padding: 15px; background: #fffde7; border-left: 5px solid #fbc02d;">
+        <strong>Conseil du jour :</strong> Ne pas prendre de position avant l'ouverture de Wall Street à 15h30.
+    </div>
+</div>
