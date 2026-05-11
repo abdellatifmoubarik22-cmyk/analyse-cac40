@@ -8,13 +8,13 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; }
         .header { background: #000; color: white; padding: 15px; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
         .container { max-width: 600px; margin: 20px auto; padding: 10px; }
-        .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        h2 { color: #007bff; margin-top: 0; font-size: 1.5rem; text-align: center; }
+        .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
+        h2 { color: #007bff; margin-top: 0; font-size: 1.5rem; }
         table { width: 100%; border-collapse: collapse; margin: 20px 0; }
         th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
         .status-up { color: #28a745; font-weight: bold; }
         .status-neutral { color: #ff8c00; font-weight: bold; }
-        .tradingview-widget-container { margin-top: 20px; border: 1px solid #eee; border-radius: 10px; overflow: hidden; }
+        .btn-graph { display: block; background: #007bff; color: white; padding: 20px; text-decoration: none; border-radius: 15px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); }
     </style>
 </head>
 <body>
@@ -40,36 +40,17 @@
                 </tr>
             </table>
 
-            <div class="tradingview-widget-container">
-                <div class="tradingview-widget-container__widget"></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-                {
-                  "colorTheme": "light",
-                  "dateRange": "12M",
-                  "showChart": true,
-                  "locale": "fr",
-                  "width": "100%",
-                  "height": 400,
-                  "largeChartUrl": "",
-                  "isTransparent": false,
-                  "showSymbolLogo": true,
-                  "showFloatingTooltip": false,
-                  "tabs": [
-                    {
-                      "title": "Indice",
-                      "symbols": [
-                        {
-                          "proName": "FOREXCOM:FRA40",
-                          "displayName": "CAC 40"
-                        }
-                      ]
-                    }
-                  ]
-                }
-                </script>
+            <div style="padding: 20px; background: #f8fbff; border-radius: 15px; border: 1px dashed #007bff; margin-top: 20px;">
+                <p style="margin-top: 0;">📊 <strong>Graphique en temps réel</strong></p>
+                <a href="https://www.tradingview.com/chart/?symbol=FX_IDC:FRA40" target="_blank" class="btn-graph">
+                    CLIQUEZ ICI POUR VOIR LE COURS LIVE
+                </a>
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 0;">(Ouverture dans un nouvel onglet pour une visibilité totale)</p>
             </div>
-            
-            <p style="text-align: center; color: #888; font-size: 0.8rem; margin-top: 15px;">Cours mis à jour en temps réel</p>
+
+            <p style="margin-top: 30px; font-style: italic; color: #555;">
+                "Le marché semble tenir ses supports. Restez vigilants sur les volumes à l'ouverture demain."
+            </p>
         </div>
     </div>
 
