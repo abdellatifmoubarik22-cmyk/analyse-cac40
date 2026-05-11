@@ -3,49 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Membre - CAC 40</title>
+    <title>Espace Membre</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f0f4f8; margin: 0; padding: 0; text-align: center; color: #333; }
-        .header { background: #001529; color: white; padding: 20px; font-weight: bold; font-size: 1.2rem; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; }
+        .header { background: #000; color: white; padding: 20px; text-align: center; font-weight: bold; }
         .container { padding: 15px; }
-        .card { background: white; padding: 20px; margin: 15px auto; width: 92%; max-width: 500px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
-        th { background: #007bff; color: white; padding: 12px; border-radius: 8px 8px 0 0; }
-        td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .valeur { font-weight: bold; text-align: right; color: #28a745; }
-        .graph-img { width: 100%; border-radius: 10px; margin-top: 10px; border: 1px solid #ddd; }
-        .btn-live { display: block; background: #007bff; color: white; padding: 15px; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px; }
+        .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-align: center; max-width: 500px; margin: auto; }
+        .stats { width: 100%; margin: 20px 0; }
+        .stats td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        .signal { font-weight: bold; color: #28a745; text-align: right; }
+        .btn-chart { display: block; background: #007bff; color: white; padding: 20px; text-decoration: none; border-radius: 12px; font-weight: bold; font-size: 1.1rem; margin-top: 10px; }
     </style>
 </head>
 <body>
-
-    <div class="header">BIENVENUE DANS VOTRE ESPACE PRIVÉ</div>
-
+    <div class="header">ESPACE MEMBRE PRIVÉ</div>
     <div class="container">
         <div class="card">
-            <h2 style="margin-top:0; color:#007bff;">Analyse du Jour</h2>
-            <table>
-                <tr>
-                    <td>Tendance</td>
-                    <td class="valeur">HAUSSIER ▲</td>
-                </tr>
-                <tr>
-                    <td>Volume</td>
-                    <td class="valeur" style="color:orange;">NORMAL</td>
-                </tr>
+            <h2 style="color:#007bff; margin-top:0;">Analyse du Jour</h2>
+            <table class="stats">
+                <tr><td>Tendance Fond</td><td class="signal">HAUSSIER ▲</td></tr>
+                <tr><td>Volume</td><td class="signal" style="color:orange;">MODÉRÉ</td></tr>
             </table>
-        </div>
-
-        <div class="card">
-            <h2 style="margin-top:0;">Aperçu du Marché</h2>
-            <img src="https://charts.finviz.com/chart.ashx?t=%5EPXC&ty=c&ta=1&p=d&s=l" alt="Graphique CAC40" class="graph-img">
-            <p style="font-size:0.8rem; color:#666;">Mise à jour automatique à chaque chargement</p>
-            
-            <a href="https://fr.tradingview.com/chart/?symbol=CAPITALCOM:FRA40" target="_blank" class="btn-live">
-                OUVRIR LE GRAPHIQUE LIVE ↗
+            <p style="text-align:left; font-size:0.9rem;"><strong>Note :</strong> Marché solide. Cliquez ci-dessous pour le cours en direct.</p>
+            <a href="https://fr.tradingview.com/chart/?symbol=CAPITALCOM:FRA40" target="_blank" class="btn-chart">
+                📊 VOIR LE GRAPHIQUE LIVE
             </a>
         </div>
     </div>
-
 </body>
 </html>
