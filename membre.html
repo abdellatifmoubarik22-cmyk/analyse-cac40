@@ -3,78 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espace Membre - Coaching CAC40</title>
+    <title>Coaching CAC40 Pro - Abdellatif</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f0f2f5; color: #333; }
-        nav { background: #000; color: #fff; padding: 1rem; text-align: center; font-weight: bold; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-        .analysis-card { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 0; }
-        .status { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; font-weight: bold; margin-bottom: 1rem; }
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-        th, td { padding: 12px; border: 1px solid #eee; text-align: left; }
-        th { background: #f8f9fa; }
-        .contact-btn { display: inline-block; background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin-top: 15px; font-weight: bold; }
-        .footer-note { text-align: center; margin-top: 30px; font-size: 0.9rem; color: #666; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; line-height: 1.6; }
+        .hero { background: linear-gradient(135deg, #001529 0%, #003366 100%); color: white; padding: 60px 20px; text-align: center; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        .btn-pay { display: inline-block; background: #000; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .btn-pay:hover { transform: scale(1.05); background: #222; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
+        .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
+        .widget-box { background: white; padding: 15px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top: -30px; }
+        h3 { color: #007bff; }
     </style>
 </head>
 <body>
-    <nav>ESPACE MEMBRE PRIVÉ - ANALYSES CAC40</nav>
-    
-    <div class="container">
-        <div class="analysis-card">
-            <div class="status">● Marché Fermé (Réouverture 09:00)</div>
-            <h2>Tableau de Bord Stratégique</h2>
-            
-            <table>
-                <tr>
-                    <th>Indicateur</th>
-                    <th>Signal</th>
-                </tr>
-                <tr>
-                    <td>Tendance Fond</td>
-                    <td style="color: #2e7d32; font-weight: bold;">HAUSSIER</td>
-                </tr>
-                <tr>
-                    <td>Volume</td>
-                    <td style="color: #ef6c00; font-weight: bold;">MODÉRÉ</td>
-                </tr>
-            </table>
 
-            <div style="height:450px; margin: 20px 0; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-                <div id="tradingview_cac" style="height:100%; width:100%;"></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                <script type="text/javascript">
-                new TradingView.widget({
-                    "autosize": true,
-                    "symbol": "FOREXCOM:FRA40",
-                    "interval": "D",
-                    "timezone": "Europe/Paris",
-                    "theme": "light",
-                    "style": "1",
-                    "locale": "fr",
-                    "toolbar_bg": "#f1f3f6",
-                    "enable_publishing": false,
-                    "hide_top_toolbar": false,
-                    "save_image": false,
-                    "container_id": "tradingview_cac"
-                });
+    <div class="hero">
+        <h1>Maîtrisez le CAC 40</h1>
+        <p>Recevez mes analyses exclusives et mes signaux en temps réel.</p>
+        <a href="https://buy.stripe.com/00w00idt8bNcb02eU438400" class="btn-pay">Démarrer pour 5€/mois</a>
+    </div>
+
+    <div class="container">
+        <div class="widget-box">
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+                {
+                  "colorTheme": "light",
+                  "dateRange": "1D",
+                  "showChart": true,
+                  "locale": "fr",
+                  "width": "100%",
+                  "height": 450,
+                  "largeChartUrl": "",
+                  "isTransparent": false,
+                  "showSymbolLogo": true,
+                  "showFloatingTooltip": true,
+                  "tabs": [
+                    {
+                      "title": "Indice CAC 40",
+                      "symbols": [
+                        {
+                          "proName": "INDEX:PX1",
+                          "displayName": "CAC 40 (Paris)"
+                        }
+                      ]
+                    }
+                  ]
+                }
                 </script>
             </div>
-
-            <div style="background: #fffde7; padding: 15px; border-left: 5px solid #fbc02d; border-radius: 4px;">
-                <strong>Conseil du jour :</strong> Le CAC 40 reste solide. Observez bien la zone des 8000 points. Surveillez l'ouverture de Wall Street demain à 15h30.
-            </div>
-
-            <div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px solid #eee;">
-                <p>Besoin d'un éclairage personnalisé ?</p>
-                <a href="mailto:amoubarik52@gmail.com" class="contact-btn">Contacter Abdellatif</a>
-            </div>
         </div>
-        
-        <div class="footer-note">
-            © 2026 Coaching CAC40 Pro - Analyses à but pédagogique uniquement.
+
+        <div class="grid">
+            <div class="card">
+                <h3>Analyses Live</h3>
+                <p>Accès prioritaire aux signaux de trading et analyses de tendance sur l'indice phare chaque jour.</p>
+            </div>
+            <div class="card">
+                <h3>Support Privé</h3>
+                <p>Une question ? Je vous réponds personnellement sous 24h par email pour vous éclairer.</p>
+                <a href="mailto:amoubarik52@gmail.com" style="color: #007bff; font-weight: bold; text-decoration: none;">Me contacter par email</a>
+            </div>
         </div>
     </div>
+
+    <footer style="text-align: center; padding: 40px; color: #888; font-size: 0.9rem;">
+        &copy; 2026 Coaching CAC40 Pro - Tous droits réservés
+    </footer>
+
 </body>
 </html>
