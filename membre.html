@@ -5,53 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Membre - Analyses CAC40</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; }
-        .header { background: #000; color: white; padding: 15px; text-align: center; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; }
-        .container { max-width: 600px; margin: 20px auto; padding: 10px; }
-        .card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; }
-        h2 { color: #007bff; margin-top: 0; font-size: 1.5rem; }
-        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        .status-up { color: #28a745; font-weight: bold; }
-        .status-neutral { color: #ff8c00; font-weight: bold; }
-        .btn-graph { display: block; background: #007bff; color: white; padding: 20px; text-decoration: none; border-radius: 15px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,123,255,0.3); }
+        body { font-family: sans-serif; margin: 0; background: #f4f7f9; color: #333; text-align: center; }
+        .header { background: #000; color: white; padding: 20px; font-weight: bold; }
+        .container { max-width: 500px; margin: 20px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h2 { color: #007bff; }
+        table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        .status { font-weight: bold; color: #28a745; }
+        .btn-live { display: block; background: #007bff; color: white; padding: 15px; text-decoration: none; border-radius: 10px; margin-top: 20px; font-weight: bold; }
     </style>
 </head>
 <body>
 
-    <div class="header">Espace Membre Privé - Analyses CAC40</div>
+    <div class="header">ESPACE MEMBRE PRIVÉ - ANALYSES CAC40</div>
 
     <div class="container">
-        <div class="card">
-            <h2>Tableau de Bord Stratégique</h2>
-            
-            <table>
-                <tr>
-                    <th>Indicateur</th>
-                    <th>Signal</th>
-                </tr>
-                <tr>
-                    <td>Tendance Fond</td>
-                    <td class="status-up">HAUSSIER</td>
-                </tr>
-                <tr>
-                    <td>Volume</td>
-                    <td class="status-neutral">MODÉRÉ</td>
-                </tr>
-            </table>
+        <h2>Tableau de Bord</h2>
+        
+        <table>
+            <tr>
+                <th>Indicateur</th>
+                <th>Signal</th>
+            </tr>
+            <tr>
+                <td>Tendance Fond</td>
+                <td class="status">HAUSSIER</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td style="color: orange; font-weight: bold;">MODÉRÉ</td>
+            </tr>
+        </table>
 
-            <div style="padding: 20px; background: #f8fbff; border-radius: 15px; border: 1px dashed #007bff; margin-top: 20px;">
-                <p style="margin-top: 0;">📊 <strong>Graphique en temps réel</strong></p>
-                <a href="https://www.tradingview.com/chart/?symbol=FX_IDC:FRA40" target="_blank" class="btn-graph">
-                    CLIQUEZ ICI POUR VOIR LE COURS LIVE
-                </a>
-                <p style="font-size: 0.8rem; color: #666; margin-bottom: 0;">(Ouverture dans un nouvel onglet pour une visibilité totale)</p>
-            </div>
-
-            <p style="margin-top: 30px; font-style: italic; color: #555;">
-                "Le marché semble tenir ses supports. Restez vigilants sur les volumes à l'ouverture demain."
-            </p>
-        </div>
+        <p>📊 <strong>Graphique en direct :</strong></p>
+        <a href="https://www.tradingview.com/chart/?symbol=FX_IDC:FRA40" target="_blank" class="btn-live">
+            CLIQUE ICI POUR LE GRAPHIQUE LIVE
+        </a>
+        
+        <p style="font-size: 0.8rem; color: #888; margin-top: 20px;">
+            Désolé pour le bug, ce lien est 100% fiable sur mobile.
+        </p>
     </div>
 
 </body>
