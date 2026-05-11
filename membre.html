@@ -5,46 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espace Membre - Analyses CAC40</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f4f7f9; color: #333; text-align: center; }
-        .header { background: #000; color: white; padding: 20px; font-weight: bold; }
-        .container { max-width: 500px; margin: 20px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        h2 { color: #007bff; }
-        table { width: 100%; margin: 20px 0; border-collapse: collapse; }
-        th, td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
-        .status { font-weight: bold; color: #28a745; }
-        .btn-live { display: block; background: #007bff; color: white; padding: 15px; text-decoration: none; border-radius: 10px; margin-top: 20px; font-weight: bold; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; line-height: 1.6; }
+        .header { background: #000; color: white; padding: 20px; text-align: center; font-weight: bold; font-size: 1.1rem; }
+        .container { max-width: 500px; margin: 20px auto; padding: 15px; }
+        .card { background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; }
+        h2 { color: #007bff; margin-top: 0; }
+        .stats-table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+        .stats-table td { padding: 15px; border-bottom: 1px solid #eee; text-align: left; }
+        .label { font-weight: bold; }
+        .status-up { color: #28a745; font-weight: bold; text-align: right; }
+        .btn-chart { display: block; background: #007bff; color: white; padding: 18px; text-decoration: none; border-radius: 10px; font-weight: bold; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,123,255,0.2); }
+        .footer { text-align: center; margin-top: 30px; font-size: 0.8rem; color: #888; }
     </style>
 </head>
 <body>
 
-    <div class="header">ESPACE MEMBRE PRIVÉ - ANALYSES CAC40</div>
+    <div class="header">ESPACE MEMBRE PRIVÉ</div>
 
     <div class="container">
-        <h2>Tableau de Bord</h2>
-        
-        <table>
-            <tr>
-                <th>Indicateur</th>
-                <th>Signal</th>
-            </tr>
-            <tr>
-                <td>Tendance Fond</td>
-                <td class="status">HAUSSIER</td>
-            </tr>
-            <tr>
-                <td>Volume</td>
-                <td style="color: orange; font-weight: bold;">MODÉRÉ</td>
-            </tr>
-        </table>
+        <div class="card">
+            <h2>Analyse du Jour</h2>
+            
+            <table class="stats-table">
+                <tr>
+                    <td class="label">Tendance CAC40</td>
+                    <td class="status-up">HAUSSIER ▲</td>
+                </tr>
+                <tr>
+                    <td class="label">Volume</td>
+                    <td style="text-align: right; font-weight: bold; color: #ff8c00;">MODÉRÉ</td>
+                </tr>
+            </table>
 
-        <p>📊 <strong>Graphique en direct :</strong></p>
-        <a href="https://www.tradingview.com/chart/?symbol=FX_IDC:FRA40" target="_blank" class="btn-live">
-            CLIQUE ICI POUR LE GRAPHIQUE LIVE
-        </a>
-        
-        <p style="font-size: 0.8rem; color: #888; margin-top: 20px;">
-            Désolé pour le bug, ce lien est 100% fiable sur mobile.
-        </p>
+            <p style="text-align: left; font-size: 0.9rem;">
+                <strong>Note du coach :</strong> Le marché reste solide au-dessus des supports. Surveillez la zone des 8000 points.
+            </p>
+
+            <a href="https://www.tradingview.com/chart/?symbol=FX_IDC:FRA40" target="_blank" class="btn-chart">
+                📊 VOIR LE GRAPHIQUE EN DIRECT
+            </a>
+        </div>
+
+        <div class="footer">
+            © 2026 Coaching CAC40 Pro
+        </div>
     </div>
 
 </body>
