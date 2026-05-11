@@ -15,6 +15,7 @@
         th, td { padding: 12px; border: 1px solid #eee; text-align: left; }
         th { background: #f8f9fa; }
         .contact-btn { display: inline-block; background: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 8px; margin-top: 15px; font-weight: bold; }
+        .footer-note { text-align: center; margin-top: 30px; font-size: 0.9rem; color: #666; }
     </style>
 </head>
 <body>
@@ -26,19 +27,27 @@
             <h2>Tableau de Bord Stratégique</h2>
             
             <table>
-                <tr><th>Indicateur</th><th>Signal</th></tr>
-                <tr><td>Tendance Fond</td><td style="color: #2e7d32; font-weight: bold;">HAUSSIER</td></tr>
-                <tr><td>Volume</td><td style="color: #ef6c00; font-weight: bold;">MODÉRÉ</td></tr>
+                <tr>
+                    <th>Indicateur</th>
+                    <th>Signal</th>
+                </tr>
+                <tr>
+                    <td>Tendance Fond</td>
+                    <td style="color: #2e7d32; font-weight: bold;">HAUSSIER</td>
+                </tr>
+                <tr>
+                    <td>Volume</td>
+                    <td style="color: #ef6c00; font-weight: bold;">MODÉRÉ</td>
+                </tr>
             </table>
 
             <div style="height:450px; margin: 20px 0; border: 1px solid #eee; border-radius: 8px; overflow: hidden;">
-                <div id="tradingview_chart" style="height:100%; width:100%;"></div>
+                <div id="tradingview_cac" style="height:100%; width:100%;"></div>
                 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
                 <script type="text/javascript">
                 new TradingView.widget({
                     "autosize": true,
                     "symbol": "FOREXCOM:FRA40",
-
                     "interval": "D",
                     "timezone": "Europe/Paris",
                     "theme": "light",
@@ -46,8 +55,9 @@
                     "locale": "fr",
                     "toolbar_bg": "#f1f3f6",
                     "enable_publishing": false,
-                    "allow_symbol_change": true,
-                    "container_id": "tradingview_chart"
+                    "hide_top_toolbar": false,
+                    "save_image": false,
+                    "container_id": "tradingview_cac"
                 });
                 </script>
             </div>
@@ -57,9 +67,13 @@
             </div>
 
             <div style="text-align: center; margin-top: 30px; padding: 20px; border-top: 1px solid #eee;">
-                <p>Besoin d'un conseil personnalisé ?</p>
-                <a href="mailto:amoubarik52@gmail.com" class="contact-btn">Envoyer un message à Abdellatif</a>
+                <p>Besoin d'un éclairage personnalisé ?</p>
+                <a href="mailto:amoubarik52@gmail.com" class="contact-btn">Contacter Abdellatif</a>
             </div>
+        </div>
+        
+        <div class="footer-note">
+            © 2026 Coaching CAC40 Pro - Analyses à but pédagogique uniquement.
         </div>
     </div>
 </body>
