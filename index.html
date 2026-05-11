@@ -8,15 +8,16 @@
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f9; color: #333; line-height: 1.6; }
         .hero { background: linear-gradient(135deg, #001529 0%, #003366 100%); color: white; padding: 60px 20px; text-align: center; }
         .container { max-width: 900px; margin: auto; padding: 20px; }
-        .btn-pay { display: inline-block; background: #000; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: transform 0.2s; }
-        .btn-pay:hover { transform: scale(1.05); }
+        .btn-pay { display: inline-block; background: #000; color: white; padding: 20px 40px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; margin: 20px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; }
+        .btn-pay:hover { transform: scale(1.05); background: #222; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 40px; }
         .card { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); text-align: center; }
-        .tradingview-widget-container { margin: 20px auto; max-width: 900px; }
+        .widget-box { background: white; padding: 15px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-top: -30px; }
         h3 { color: #007bff; }
     </style>
 </head>
 <body>
+
     <div class="hero">
         <h1>Maîtrisez le CAC 40</h1>
         <p>Recevez mes analyses exclusives et mes signaux en temps réel.</p>
@@ -24,47 +25,32 @@
     </div>
 
     <div class="container">
-        <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
-            {
-              "colorTheme": "light",
-              "dateRange": "12M",
-              "showChart": true,
-              "locale": "fr",
-              "width": "100%",
-              "height": 400,
-              "largeChartUrl": "",
-              "isTransparent": false,
-              "showSymbolLogo": true,
-              "showFloatingTooltip": false,
-              "tabs": [
+        <div class="widget-box">
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
                 {
-                  "title": "Indices",
-                  "symbols": [
+                  "colorTheme": "light",
+                  "dateRange": "1D",
+                  "showChart": true,
+                  "locale": "fr",
+                  "width": "100%",
+                  "height": 450,
+                  "largeChartUrl": "",
+                  "isTransparent": false,
+                  "showSymbolLogo": true,
+                  "showFloatingTooltip": true,
+                  "tabs": [
                     {
-                      "proName": "FOREXCOM:FRA40",
-                      "displayName": "CAC 40 Paris"
+                      "title": "Indice CAC 40",
+                      "symbols": [
+                        {
+                          "proName": "INDEX:PX1",
+                          "displayName": "CAC 40 (Paris)"
+                        }
+                      ]
                     }
-                  ],
-                  "originalTitle": "Indices"
+                  ]
                 }
-              ]
-            }
-            </script>
-        </div>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Analyses Live</h3>
-                <p>Accès prioritaire aux signaux de trading et analyses de tendance sur l'indice phare chaque jour.</p>
+                </script>
             </div>
-            <div class="card">
-                <h3>Support Privé</h3>
-                <p>Une question ? Je vous réponds personnellement sous 24h par email pour vous éclairer.</p>
-                <a href="mailto:amoubarik52@gmail.com" style="color: #007bff; font-weight: bold;">Me contacter par email</a>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
